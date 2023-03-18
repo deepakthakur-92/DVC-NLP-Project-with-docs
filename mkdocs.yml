@@ -9,7 +9,7 @@ site_description: >-
   DESCRIPTION
 
 # Repository
-repo_name: deepakthakur-92/REPO_NAME
+repo_name: deepakthakur-92/DVC-NLP-Project-with-docs 
 repo_url: https://github.com/deepakthakur-92/DVC-NLP-Project-with-docs 
 
 # Configuration
@@ -40,12 +40,8 @@ extra:
   social:
     - icon: fontawesome/brands/github-alt
       link: https://github.com/deepakthakur-92
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/c17hawke
     - icon: fontawesome/brands/linkedin
-      link: https://linkedin.com/in/c17hawke
-    - icon: fontawesome/brands/instagram
-      link: https://www.instagram.com/c17hawke/
+      link: www.linkedin.com/in/deepak-thakur-7436041b3
 
 extra_javascript:
   - javascripts/mathjax.js
