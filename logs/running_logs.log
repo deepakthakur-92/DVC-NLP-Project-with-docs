@@ -42,3 +42,111 @@ AttributeError: 'DataFrame' object has no attribute 'id'
 [2023-03-21 17:21:26,720: INFO: common]: The input dataframeartifacts\prepared\test.tsvsize id (7464, 3) is read.
 [2023-03-21 17:21:30,788: INFO: stage_02_featurization]: >>>>> stage Featurization completed!<<<<<
 
+[2023-03-21 19:14:35,513: INFO: stage_02_featurization]: 
+********************
+[2023-03-21 19:14:35,513: INFO: stage_02_featurization]: >>>>> stage Featurization started <<<<<
+[2023-03-21 19:14:35,518: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-03-21 19:14:35,520: INFO: common]: yaml file: params.yaml loaded successfully
+[2023-03-21 19:14:35,521: INFO: common]: created directory at: artifacts\features
+[2023-03-21 19:14:35,673: INFO: common]: The input dataframeartifacts\prepared\train.tsvsize id (17536, 3) is read.
+[2023-03-21 19:14:47,331: ERROR: stage_02_featurization]: name 'sparse' is not defined
+Traceback (most recent call last):
+  File "src/stage_02_featurization.py", line 81, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_02_featurization.py", line 59, in main
+    save_matrix(df=df_train, text_matrix= train_words_tfidf_matrix, out_path= featurize_train_data_path)
+  File "c:\users\deepak.thakur\work\dvc-nlp-project-with-docs\src\utils\data_mgmt.py", line 36, in save_matrix
+    pid_matrix = sparse.csr_matrix(df.pid.astype(np.int64)).T
+NameError: name 'sparse' is not defined
+[2023-03-21 19:16:49,987: INFO: stage_02_featurization]: 
+********************
+[2023-03-21 19:16:49,987: INFO: stage_02_featurization]: >>>>> stage Featurization started <<<<<
+[2023-03-21 19:16:49,990: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-03-21 19:16:49,992: INFO: common]: yaml file: params.yaml loaded successfully
+[2023-03-21 19:16:49,992: INFO: common]: created directory at: artifacts\features
+[2023-03-21 19:16:50,155: INFO: common]: The input dataframeartifacts\prepared\train.tsvsize id (17536, 3) is read.
+[2023-03-21 19:17:01,738: ERROR: stage_02_featurization]: module 'scipy.sparse' has no attribute 'hstak'
+Traceback (most recent call last):
+  File "src/stage_02_featurization.py", line 81, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_02_featurization.py", line 59, in main
+    save_matrix(df=df_train, text_matrix= train_words_tfidf_matrix, out_path= featurize_train_data_path)
+  File "c:\users\deepak.thakur\work\dvc-nlp-project-with-docs\src\utils\data_mgmt.py", line 39, in save_matrix
+    result = sparse.hstak([pid_matrix, label_matrix, text_matrix])
+AttributeError: module 'scipy.sparse' has no attribute 'hstak'
+[2023-03-21 19:17:19,400: INFO: stage_02_featurization]: 
+********************
+[2023-03-21 19:17:19,400: INFO: stage_02_featurization]: >>>>> stage Featurization started <<<<<
+[2023-03-21 19:17:19,403: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-03-21 19:17:19,406: INFO: common]: yaml file: params.yaml loaded successfully
+[2023-03-21 19:17:19,407: INFO: common]: created directory at: artifacts\features
+[2023-03-21 19:17:19,568: INFO: common]: The input dataframeartifacts\prepared\train.tsvsize id (17536, 3) is read.
+[2023-03-21 19:17:31,147: INFO: data_mgmt]: The output matrix saved at artifacts\features\train.pkl of shape: (17536, 2502)
+[2023-03-21 19:17:31,237: INFO: common]: The input dataframeartifacts\prepared\test.tsvsize id (7464, 3) is read.
+[2023-03-21 19:17:34,952: ERROR: stage_02_featurization]: blocks[0,:] has incompatible row dimensions. Got blocks[0,2].shape[0] == 17536, expected 7464.
+Traceback (most recent call last):
+  File "src/stage_02_featurization.py", line 81, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_02_featurization.py", line 67, in main
+    save_matrix(df=df_test, text_matrix= test_words_tfidf_matrix, out_path= featurize_test_data_path)
+  File "c:\users\deepak.thakur\work\dvc-nlp-project-with-docs\src\utils\data_mgmt.py", line 39, in save_matrix
+    result = sparse.hstack([pid_matrix, label_matrix, text_matrix])
+  File "c:\Users\deepak.thakur\Work\DVC-NLP-Project-with-docs\env\lib\site-packages\scipy\sparse\_construct.py", line 535, in hstack
+    return bmat([blocks], format=format, dtype=dtype)
+  File "c:\Users\deepak.thakur\Work\DVC-NLP-Project-with-docs\env\lib\site-packages\scipy\sparse\_construct.py", line 668, in bmat
+    raise ValueError(msg)
+ValueError: blocks[0,:] has incompatible row dimensions. Got blocks[0,2].shape[0] == 17536, expected 7464.
+[2023-03-21 19:20:09,040: INFO: stage_02_featurization]: 
+********************
+[2023-03-21 19:20:09,041: INFO: stage_02_featurization]: >>>>> stage Featurization started <<<<<
+[2023-03-21 19:20:09,046: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-03-21 19:20:09,049: INFO: common]: yaml file: params.yaml loaded successfully
+[2023-03-21 19:20:09,049: INFO: common]: created directory at: artifacts\features
+[2023-03-21 19:20:09,223: INFO: common]: The input dataframeartifacts\prepared\train.tsvsize id (17536, 3) is read.
+[2023-03-21 19:20:21,028: INFO: data_mgmt]: The output matrix saved at artifacts\features\train.pkl of shape: (17536, 2502)
+[2023-03-21 19:20:21,112: INFO: common]: The input dataframeartifacts\prepared\test.tsvsize id (7464, 3) is read.
+[2023-03-21 19:20:25,317: ERROR: stage_02_featurization]: blocks[0,:] has incompatible row dimensions. Got blocks[0,2].shape[0] == 17536, expected 7464.
+Traceback (most recent call last):
+  File "src/stage_02_featurization.py", line 81, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_02_featurization.py", line 67, in main
+    save_matrix(df=df_test, text_matrix= test_words_tfidf_matrix, out_path= featurize_test_data_path)
+  File "c:\users\deepak.thakur\work\dvc-nlp-project-with-docs\src\utils\data_mgmt.py", line 39, in save_matrix
+    result = sparse.hstack([pid_matrix, label_matrix, text_matrix])
+  File "c:\Users\deepak.thakur\Work\DVC-NLP-Project-with-docs\env\lib\site-packages\scipy\sparse\_construct.py", line 535, in hstack
+    return bmat([blocks], format=format, dtype=dtype)
+  File "c:\Users\deepak.thakur\Work\DVC-NLP-Project-with-docs\env\lib\site-packages\scipy\sparse\_construct.py", line 668, in bmat
+    raise ValueError(msg)
+ValueError: blocks[0,:] has incompatible row dimensions. Got blocks[0,2].shape[0] == 17536, expected 7464.
+[2023-03-21 19:21:36,434: INFO: stage_02_featurization]: 
+********************
+[2023-03-21 19:21:36,434: INFO: stage_02_featurization]: >>>>> stage Featurization started <<<<<
+[2023-03-21 19:21:36,438: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-03-21 19:21:36,438: INFO: common]: yaml file: params.yaml loaded successfully
+[2023-03-21 19:21:36,440: INFO: common]: created directory at: artifacts\features
+[2023-03-21 19:21:36,576: INFO: common]: The input dataframeartifacts\prepared\train.tsvsize id (17536, 3) is read.
+[2023-03-21 19:21:46,097: INFO: data_mgmt]: The output matrix saved at artifacts\features\train.pkl of shape: (17536, 2502)
+[2023-03-21 19:21:46,187: INFO: common]: The input dataframeartifacts\prepared\test.tsvsize id (7464, 3) is read.
+[2023-03-21 19:21:47,980: INFO: data_mgmt]: The output matrix saved at artifacts\features\test.pkl of shape: (7464, 2502)
+[2023-03-21 19:21:48,210: INFO: stage_02_featurization]: >>>>> stage Featurization completed!<<<<<
+
+[2023-03-21 21:04:09,616: INFO: stage_01_prepare_data]: 
+********************
+[2023-03-21 21:04:09,616: INFO: stage_01_prepare_data]: >>>>> stage Prepare_data started <<<<<
+[2023-03-21 21:04:09,620: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-03-21 21:04:09,621: INFO: common]: yaml file: params.yaml loaded successfully
+[2023-03-21 21:04:09,622: INFO: common]: created directory at: artifacts\prepared
+[2023-03-21 21:04:11,917: INFO: stage_01_prepare_data]: >>>>> stage Prepare_data completed!<<<<<
+
+[2023-03-21 21:04:14,248: INFO: stage_02_featurization]: 
+********************
+[2023-03-21 21:04:14,248: INFO: stage_02_featurization]: >>>>> stage Featurization started <<<<<
+[2023-03-21 21:04:14,252: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-03-21 21:04:14,253: INFO: common]: yaml file: params.yaml loaded successfully
+[2023-03-21 21:04:14,254: INFO: common]: created directory at: artifacts\features
+[2023-03-21 21:04:14,417: INFO: common]: The input dataframeartifacts\prepared\train.tsvsize id (17536, 3) is read.
+[2023-03-21 21:04:25,357: INFO: data_mgmt]: The output matrix saved at artifacts\features\train.pkl of shape: (17536, 2502)
+[2023-03-21 21:04:25,423: INFO: common]: The input dataframeartifacts\prepared\test.tsvsize id (7464, 3) is read.
+[2023-03-21 21:04:27,264: INFO: data_mgmt]: The output matrix saved at artifacts\features\test.pkl of shape: (7464, 2502)
+[2023-03-21 21:04:27,493: INFO: stage_02_featurization]: >>>>> stage Featurization completed!<<<<<
+
