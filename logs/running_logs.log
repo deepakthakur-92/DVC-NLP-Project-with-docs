@@ -170,3 +170,27 @@ ValueError: blocks[0,:] has incompatible row dimensions. Got blocks[0,2].shape[0
 [2023-03-21 22:58:03,649: INFO: data_mgmt]: The output matrix saved at artifacts\features\test.pkl of shape: (7464, 2502)
 [2023-03-21 22:58:03,987: INFO: stage_02_featurization]: >>>>> stage Featurization completed!<<<<<
 
+[2023-03-21 22:59:42,621: INFO: stage_03_train]: 
+********************
+[2023-03-21 22:59:42,621: INFO: stage_03_train]: >>>>> stage Training started <<<<<
+[2023-03-21 22:59:42,624: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-03-21 22:59:42,626: INFO: common]: yaml file: params.yaml loaded successfully
+[2023-03-21 22:59:42,626: INFO: common]: created directory at: artifacts\model
+[2023-03-21 22:59:42,641: INFO: stage_03_train]: input matrix size: (17536, 2502)
+[2023-03-21 22:59:42,642: INFO: stage_03_train]: X matrix size: (17536, 2500)
+[2023-03-21 22:59:42,642: INFO: stage_03_train]: labels matrix size or labels: (17536,)
+[2023-03-21 22:59:47,221: INFO: stage_03_train]: saved our model at: artifacts\model\model.pkl
+[2023-03-21 22:59:47,222: INFO: stage_03_train]: >>>>> stage Training completed!<<<<<
+
+[2023-03-21 23:01:40,795: INFO: stage_03_train]: 
+********************
+[2023-03-21 23:01:40,795: INFO: stage_03_train]: >>>>> stage Training started <<<<<
+[2023-03-21 23:01:40,798: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-03-21 23:01:40,801: INFO: common]: yaml file: params.yaml loaded successfully
+[2023-03-21 23:01:40,801: INFO: common]: created directory at: artifacts\model
+[2023-03-21 23:01:40,812: INFO: stage_03_train]: input matrix size: (17536, 2502)
+[2023-03-21 23:01:40,812: INFO: stage_03_train]: X matrix size: (17536, 2500)
+[2023-03-21 23:01:40,812: INFO: stage_03_train]: labels matrix size or labels: (17536,)
+[2023-03-21 23:01:45,288: INFO: stage_03_train]: saved our model at: artifacts\model\model.pkl
+[2023-03-21 23:01:45,290: INFO: stage_03_train]: >>>>> stage Training completed!<<<<<
+
