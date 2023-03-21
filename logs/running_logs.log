@@ -150,3 +150,23 @@ ValueError: blocks[0,:] has incompatible row dimensions. Got blocks[0,2].shape[0
 [2023-03-21 21:04:27,264: INFO: data_mgmt]: The output matrix saved at artifacts\features\test.pkl of shape: (7464, 2502)
 [2023-03-21 21:04:27,493: INFO: stage_02_featurization]: >>>>> stage Featurization completed!<<<<<
 
+[2023-03-21 22:57:44,221: INFO: stage_01_prepare_data]: 
+********************
+[2023-03-21 22:57:44,221: INFO: stage_01_prepare_data]: >>>>> stage Prepare_data started <<<<<
+[2023-03-21 22:57:44,224: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-03-21 22:57:44,226: INFO: common]: yaml file: params.yaml loaded successfully
+[2023-03-21 22:57:44,226: INFO: common]: created directory at: artifacts\prepared
+[2023-03-21 22:57:46,736: INFO: stage_01_prepare_data]: >>>>> stage Prepare_data completed!<<<<<
+
+[2023-03-21 22:57:49,759: INFO: stage_02_featurization]: 
+********************
+[2023-03-21 22:57:49,760: INFO: stage_02_featurization]: >>>>> stage Featurization started <<<<<
+[2023-03-21 22:57:49,763: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-03-21 22:57:49,765: INFO: common]: yaml file: params.yaml loaded successfully
+[2023-03-21 22:57:49,766: INFO: common]: created directory at: artifacts\features
+[2023-03-21 22:57:49,927: INFO: common]: The input dataframeartifacts\prepared\train.tsvsize id (17536, 3) is read.
+[2023-03-21 22:58:01,591: INFO: data_mgmt]: The output matrix saved at artifacts\features\train.pkl of shape: (17536, 2502)
+[2023-03-21 22:58:01,675: INFO: common]: The input dataframeartifacts\prepared\test.tsvsize id (7464, 3) is read.
+[2023-03-21 22:58:03,649: INFO: data_mgmt]: The output matrix saved at artifacts\features\test.pkl of shape: (7464, 2502)
+[2023-03-21 22:58:03,987: INFO: stage_02_featurization]: >>>>> stage Featurization completed!<<<<<
+
