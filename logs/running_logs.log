@@ -194,3 +194,98 @@ ValueError: blocks[0,:] has incompatible row dimensions. Got blocks[0,2].shape[0
 [2023-03-21 23:01:45,288: INFO: stage_03_train]: saved our model at: artifacts\model\model.pkl
 [2023-03-21 23:01:45,290: INFO: stage_03_train]: >>>>> stage Training completed!<<<<<
 
+[2023-03-22 13:40:51,950: INFO: stage_04_evaluate]: 
+********************
+[2023-03-22 13:40:51,951: INFO: stage_04_evaluate]: >>>>> stage Evaluation started <<<<<
+[2023-03-22 13:40:51,955: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-03-22 13:40:51,957: INFO: common]: yaml file: params.yaml loaded successfully
+[2023-03-22 13:40:51,957: INFO: stage_04_evaluate]: >>>>> stage Evaluation completed!<<<<<
+
+[2023-03-22 13:41:05,544: INFO: stage_04_evaluate]: 
+********************
+[2023-03-22 13:41:05,544: INFO: stage_04_evaluate]: >>>>> stage Evaluation started <<<<<
+[2023-03-22 13:41:05,547: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-03-22 13:41:05,550: INFO: common]: yaml file: params.yaml loaded successfully
+[2023-03-22 13:41:05,550: ERROR: stage_04_evaluate]: name 'joblib' is not defined
+Traceback (most recent call last):
+  File "src/stage_04_evaluate.py", line 71, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_04_evaluate.py", line 38, in main
+    model = joblib.load(model_path)
+NameError: name 'joblib' is not defined
+[2023-03-22 13:41:24,133: INFO: stage_04_evaluate]: 
+********************
+[2023-03-22 13:41:24,134: INFO: stage_04_evaluate]: >>>>> stage Evaluation started <<<<<
+[2023-03-22 13:41:24,137: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-03-22 13:41:24,139: INFO: common]: yaml file: params.yaml loaded successfully
+[2023-03-22 13:41:24,490: ERROR: stage_04_evaluate]: X has 1 features, but RandomForestClassifier is expecting 2500 features as input.
+Traceback (most recent call last):
+  File "src/stage_04_evaluate.py", line 72, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_04_evaluate.py", line 45, in main
+    predictions = model.predict(X)
+  File "c:\Users\deepak.thakur\Work\DVC-NLP-Project-with-docs\env\lib\site-packages\sklearn\ensemble\_forest.py", line 820, in predict
+    proba = self.predict_proba(X)
+  File "c:\Users\deepak.thakur\Work\DVC-NLP-Project-with-docs\env\lib\site-packages\sklearn\ensemble\_forest.py", line 862, in predict_proba
+    X = self._validate_X_predict(X)
+  File "c:\Users\deepak.thakur\Work\DVC-NLP-Project-with-docs\env\lib\site-packages\sklearn\ensemble\_forest.py", line 602, in _validate_X_predict
+    X = self._validate_data(X, dtype=DTYPE, accept_sparse="csr", reset=False)
+  File "c:\Users\deepak.thakur\Work\DVC-NLP-Project-with-docs\env\lib\site-packages\sklearn\base.py", line 588, in _validate_data
+    self._check_n_features(X, reset=reset)
+  File "c:\Users\deepak.thakur\Work\DVC-NLP-Project-with-docs\env\lib\site-packages\sklearn\base.py", line 389, in _check_n_features
+    raise ValueError(
+ValueError: X has 1 features, but RandomForestClassifier is expecting 2500 features as input.
+[2023-03-22 13:42:22,131: INFO: stage_04_evaluate]: 
+********************
+[2023-03-22 13:42:22,131: INFO: stage_04_evaluate]: >>>>> stage Evaluation started <<<<<
+[2023-03-22 13:42:22,135: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-03-22 13:42:22,137: INFO: common]: yaml file: params.yaml loaded successfully
+[2023-03-22 13:42:22,482: INFO: common]: json file saved at: scores.json
+[2023-03-22 13:42:22,484: INFO: stage_04_evaluate]: >>>>> stage Evaluation completed!<<<<<
+
+[2023-03-22 14:30:00,555: INFO: stage_04_evaluate]: 
+********************
+[2023-03-22 14:30:00,555: INFO: stage_04_evaluate]: >>>>> stage Evaluation started <<<<<
+[2023-03-22 14:30:00,558: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-03-22 14:30:00,559: INFO: common]: yaml file: params.yaml loaded successfully
+[2023-03-22 14:30:00,892: INFO: common]: json file saved at: scores.json
+[2023-03-22 14:30:00,900: INFO: common]: json file saved at: prc.json
+[2023-03-22 14:30:00,902: ERROR: stage_04_evaluate]: name 'roc_data' is not defined
+Traceback (most recent call last):
+  File "src/stage_04_evaluate.py", line 96, in <module>
+    main(config_path=parsed_args.config, params_path=parsed_args.params)
+  File "src/stage_04_evaluate.py", line 84, in main
+    save_json(ROC_json_path, roc_data)
+NameError: name 'roc_data' is not defined
+[2023-03-22 14:30:38,562: INFO: stage_04_evaluate]: 
+********************
+[2023-03-22 14:30:38,563: INFO: stage_04_evaluate]: >>>>> stage Evaluation started <<<<<
+[2023-03-22 14:30:38,566: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-03-22 14:30:38,568: INFO: common]: yaml file: params.yaml loaded successfully
+[2023-03-22 14:30:38,929: INFO: common]: json file saved at: scores.json
+[2023-03-22 14:30:38,936: INFO: common]: json file saved at: prc.json
+[2023-03-22 14:30:38,941: INFO: common]: json file saved at: roc.json
+[2023-03-22 14:30:38,943: INFO: stage_04_evaluate]: >>>>> stage Evaluation completed!<<<<<
+
+[2023-03-22 14:38:29,466: INFO: stage_03_train]: 
+********************
+[2023-03-22 14:38:29,466: INFO: stage_03_train]: >>>>> stage Training started <<<<<
+[2023-03-22 14:38:29,469: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-03-22 14:38:29,471: INFO: common]: yaml file: params.yaml loaded successfully
+[2023-03-22 14:38:29,471: INFO: common]: created directory at: artifacts\model
+[2023-03-22 14:38:29,512: INFO: stage_03_train]: input matrix size: (17536, 2502)
+[2023-03-22 14:38:29,512: INFO: stage_03_train]: X matrix size: (17536, 2500)
+[2023-03-22 14:38:29,512: INFO: stage_03_train]: labels matrix size or labels: (17536,)
+[2023-03-22 14:38:34,341: INFO: stage_03_train]: saved our model at: artifacts\model\model.pkl
+[2023-03-22 14:38:34,344: INFO: stage_03_train]: >>>>> stage Training completed!<<<<<
+
+[2023-03-22 14:38:37,661: INFO: stage_04_evaluate]: 
+********************
+[2023-03-22 14:38:37,661: INFO: stage_04_evaluate]: >>>>> stage Evaluation started <<<<<
+[2023-03-22 14:38:37,664: INFO: common]: yaml file: configs/config.yaml loaded successfully
+[2023-03-22 14:38:37,666: INFO: common]: yaml file: params.yaml loaded successfully
+[2023-03-22 14:38:38,003: INFO: common]: json file saved at: scores.json
+[2023-03-22 14:38:38,012: INFO: common]: json file saved at: prc.json
+[2023-03-22 14:38:38,020: INFO: common]: json file saved at: roc.json
+[2023-03-22 14:38:38,022: INFO: stage_04_evaluate]: >>>>> stage Evaluation completed!<<<<<
+
