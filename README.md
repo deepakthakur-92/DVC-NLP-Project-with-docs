@@ -1,5 +1,5 @@
-# Project Name
-StackOverflow Text Classification: Identifying Python-Related Questions with ML
+# Project Name:- StackOverflow Text Classification: Identifying Python-Related Questions with ML
+
 
 # Project Description
 This project involved using machine learning algorithms to classify StackOverflow questions based on their relevance to Python. The dataset consisted of a large collection of text-based questions with binary labels indicating whether they were related to Python or not. The project focused on developing a text classification model that could accurately distinguish between Python-related questions and other programming language questions. Techniques such as data preprocessing, feature extraction, model selection, and hyperparameter tuning were applied to improve the model performance. The final model achieved high accuracy in identifying Python-related questions, and the project demonstrates the potential for applying machine learning to large-scale text classification tasks.
