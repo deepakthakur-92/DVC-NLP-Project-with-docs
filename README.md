@@ -17,7 +17,7 @@ This project involved using machine learning algorithms to classify StackOverflo
 - Natural language processing: The techniques used in this project can be applied to other text-based classification problems, including sentiment analysis, spam detection, and document classification. The project can serve as a template or reference for developing similar models in different domains or industries.
 
 # Dataset:
- - 
+ - [Data](https://github.com/deepakthakur-92/DVC-NLP-Project-with-docs/tree/main/data)
 
 # STEPS to run this project:
 
