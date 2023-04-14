@@ -15,14 +15,15 @@ def process_posts(fd_in, fd_out_train, fd_out_test, target_tag, split):
     fd_out_test.write(column_names)
     for line in tqdm(fd_in):
         try:
-            fd_out = fd_out_train if random.random() > split else fd_out_test
+            # random.random() will generate random number between 0 and 1, so if number is greater than 0.3 then store the line in fd_out_train otherwise in fd_out_test 
+            fd_out = fd_out_train if random.random() > split else fd_out_test 
 
-            attr = ET.fromstring(line).attrib
+            attr = ET.fromstring(line).attrib # it will take the line and read the attributes
 
-            pid = attr.get('Id',"")
-            label = 1 if target_tag in attr.get('Tags',"") else 0
-            title = re.sub(r"\s+", " ", attr.get('Title',"")).strip()
-            body = re.sub(r"\s+", " ", attr.get('Body',"")).strip()
+            pid = attr.get('Id',"") # attr.get will take out the label, title,body from the xml file
+            label = 1 if target_tag in attr.get('Tags',"") else 0 # if python is present then 1 if not then 0
+            title = re.sub(r"\s+", " ", attr.get('Title',"")).strip() # this removes the extra spaces between the text
+            body = re.sub(r"\s+", " ", attr.get('Body',"")).strip() # this removes the extra spaces between the text
             text = f"{title} {body}" # title + " " + body
 
             fd_out.write(f"{pid}\t{label}\t{text}\n")
