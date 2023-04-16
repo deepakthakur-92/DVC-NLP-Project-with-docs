@@ -24,7 +24,7 @@ def save_json(path: str, data: dict) -> None:
     logging.info(f"json file saved at: {path}")
 
 
-def get_df(path_to_data: str, sep: str="\t", encoding="utf-8") -> pd.DataFrame:
+def get_df(path_to_data: str, sep: str="\t", encoding="utf-8") -> pd.DataFrame: # to get the data(train.tsv & test.tsv) for featurization
     df = pd.read_csv(
         path_to_data, 
         delimiter=sep, 
@@ -32,5 +32,5 @@ def get_df(path_to_data: str, sep: str="\t", encoding="utf-8") -> pd.DataFrame:
         #header=None, 
         #names=column_names,
     )
-    logging.info(f"The input dataframe{path_to_data}size id {df.shape} is read.")
+    logging.info(f"The input dataframe {path_to_data} size is {df.shape} is read.")
     return df
