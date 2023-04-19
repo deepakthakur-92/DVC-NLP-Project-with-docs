@@ -34,7 +34,7 @@ def process_posts(fd_in, fd_out_train, fd_out_test, target_tag, split):
 
 
 def save_matrix(df, text_matrix, out_path):
-    pid_matrix = sparse.csr_matrix(df.pid.astype(np.int64)).T # sparse.csr_matrix what it will do if there are lots of zeroes then it will only stores the position of the value only - see csr_expts.py
+    pid_matrix = sparse.csr_matrix(df.pid.astype(np.int64)).T # sparse.csr_matrix what it will do if there are lots of zeroes then it will only stores the position of the value(which is non zeroes, e.g in tuple form like in first row at 0th position there is a value 4 then it will be like - (0,0)- 4 since there multiple rows and column that's why 2D) only - see csr_expts.py
     label_matrix = sparse.csr_matrix(df.label.astype(np.int64)).T
 
     result = sparse.hstack([pid_matrix, label_matrix, text_matrix],format="csr")
