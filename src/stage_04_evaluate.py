@@ -65,7 +65,7 @@ def main(config_path, params_path):
     precision, recall, prc_threshold = metrics.precision_recall_curve(labels, pred)
 
     nth_point = math.ceil(len(prc_threshold)/1000)
-    prc_points = list(zip(precision, recall, prc_threshold))[::nth_point]
+    prc_points = list(zip(precision, recall, prc_threshold))[::nth_point] # here we are printing only some steps of precision, recall, prc_threshold --> prc_explanation.py
     # prc_points = list(zip(precision, recall, prc_threshold))
 
     logging.info(f"no. of prc points: {len(prc_points)}")
